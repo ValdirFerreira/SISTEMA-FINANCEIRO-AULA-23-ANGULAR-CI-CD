@@ -23,4 +23,4 @@ jobs:
       - name: Build
         run: |
           cd FrontEnd
-          npm run build -- --configuration=dev --aot=true --outputHashing=all --base-href=/my-financeiro/
+          npm run build -- --configuration=dev --aot=true  --base-href=/my-financeiro/
