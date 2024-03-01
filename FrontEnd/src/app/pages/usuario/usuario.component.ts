@@ -8,8 +8,8 @@ import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-Usuario',
-  templateUrl: '/src/app/pages/usuario/Usuario.component.html',
-  styleUrls: ['/src/app/pages/usuario/Usuario.component.scss']
+  templateUrl: './usuario.component.html',
+  styleUrls: ['./usuario.component.scss']
 })
 export class UsuarioComponent {
 
