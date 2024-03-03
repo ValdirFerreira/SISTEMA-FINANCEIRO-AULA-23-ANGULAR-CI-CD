@@ -1,1 +1,27 @@
 
+name: Build FrontEnd
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'FrontEnd/**'
+      - '.github/workflows/Build-Front.yml'
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Dependencies
+        run: |
+          cd FrontEnd
+          npm install --force
+      - name: Build
+        run: |
+          cd FrontEnd
+          npm run build -- --configuration=dev --aot=true  --base-href=/my-financeiro/
