@@ -24,3 +24,4 @@ jobs:
         run: |
           cd FrontEnd
           npm run build -- --configuration=dev --aot=true  --base-href=/my-financeiro/
+          
