@@ -4,11 +4,15 @@ import { AuthService } from 'src/app/services/auth.service';
 import { DespesaService } from 'src/app/services/despesa.service';
 import { MenuService } from 'src/app/services/menu.service';
 import { SistemaService } from 'src/app/services/sistema.service';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.scss'],
+    standalone: true,
+    imports: [NavbarComponent, SidebarComponent]
 })
 export class DashboardComponent {
 

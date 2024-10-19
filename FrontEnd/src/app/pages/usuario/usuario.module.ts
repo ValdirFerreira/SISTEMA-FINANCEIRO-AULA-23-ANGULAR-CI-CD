@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NavbarModule } from 'src/app/components/navbar/navbar.module';
-import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
+
+
 
 import { UsuarioRoutingModule } from './usuario-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -14,23 +14,19 @@ import { UsuarioComponent } from './usuario.component';
 
 @NgModule(
     {
-        providers: [],
-        declarations: [UsuarioComponent],
-        imports: [
-            CommonModule,
-            UsuarioRoutingModule,
-            NavbarModule,
-            SidebarModule,
-            ReactiveFormsModule,
-
-            NgxPaginationModule,
-            FormsModule,
-            NgSelectModule,
-            MatIconModule,
-            MatSlideToggleModule
-            
-        ]
-    }
+    providers: [],
+    imports: [
+    CommonModule,
+    UsuarioRoutingModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    FormsModule,
+    NgSelectModule,
+    MatIconModule,
+    MatSlideToggleModule,
+    UsuarioComponent
+]
+}
 )
 
 export class UsuarioModule { }

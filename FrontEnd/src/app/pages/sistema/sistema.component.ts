@@ -1,16 +1,24 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SistemaFinanceiro } from 'src/app/models/SistemaFinanceiro';
 import { AuthService } from 'src/app/services/auth.service';
 import { MenuService } from 'src/app/services/menu.service';
 import { SistemaService } from 'src/app/services/sistema.service';
 
 import { UsuarioSistemaFinanceiro } from 'src/app/services/usuario-sistema.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { NgIf, NgFor, NgClass } from '@angular/common';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 
 @Component({
-  selector: 'app-sistema',
-  templateUrl: './sistema.component.html',
-  styleUrls: ['./sistema.component.scss']
+    selector: 'app-sistema',
+    templateUrl: './sistema.component.html',
+    styleUrls: ['./sistema.component.scss'],
+    standalone: true,
+    imports: [NavbarComponent, SidebarComponent, NgIf, FormsModule, ReactiveFormsModule, MatSlideToggleModule, NgFor, NgClass, NgSelectModule, NgxPaginationModule]
 })
 export class SistemaComponent {
 

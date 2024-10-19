@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Categoria } from 'src/app/models/Categoria';
 import { SelectModel } from 'src/app/models/SelectModel';
 import { SistemaFinanceiro } from 'src/app/models/SistemaFinanceiro';
@@ -7,11 +7,18 @@ import { AuthService } from 'src/app/services/auth.service';
 import { CategoriaService } from 'src/app/services/categoria.service';
 import { MenuService } from 'src/app/services/menu.service';
 import { SistemaService } from 'src/app/services/sistema.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { NgIf, NgFor, NgClass } from '@angular/common';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
 
 @Component({
-  selector: 'app-categoria',
-  templateUrl: './categoria.component.html',
-  styleUrls: ['./categoria.component.scss']
+    selector: 'app-categoria',
+    templateUrl: './categoria.component.html',
+    styleUrls: ['./categoria.component.scss'],
+    standalone: true,
+    imports: [NavbarComponent, SidebarComponent, NgIf, FormsModule, ReactiveFormsModule, NgSelectModule, NgFor, NgClass, NgxPaginationModule]
 })
 export class CategoriaComponent {
 
